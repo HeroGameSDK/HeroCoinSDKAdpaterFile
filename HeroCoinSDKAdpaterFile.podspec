@@ -3,7 +3,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "HeroCoinSDKAdpaterFile"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.3"
   spec.summary      = "游戏SDK Adpater文件"
 
   spec.description  = "Hero游戏SDK Adpater文件"
