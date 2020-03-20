@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import "TimeHelper.h"
 #import "TimeSharingObject.h"
 

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <HeroCoinSDK/HeroCoinSDK.h>
+//#import <HeroCoinSDK/HeroCoinSDK.h>
 #import "TimeThirdSDKLoginResult.h"
 
 /// 第三方SDK类型，与SDK内部ThirdSDkType保持一致
