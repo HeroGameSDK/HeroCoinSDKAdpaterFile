@@ -80,10 +80,10 @@
          completion:(TimeThirdSDKSharingCallback)completion
 {
     switch (shareType) {
-        case TimeSocialShareType_Text:
+        case TimeSharingType_Text:
             [self shareTextToLine:shareObj completion:completion];
             break;
-        case TimeSocialShareType_Image:
+        case TimeSharingType_Image:
             [self shareImageToLine:shareObj completion:completion];
             break;
         default:

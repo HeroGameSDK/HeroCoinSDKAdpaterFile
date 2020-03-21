@@ -49,6 +49,7 @@
 /// @param callback 回调
 - (void)loginWithSDKType:(TimeThirdSDkType)SDKType fromViewController:(UIViewController *)fromViewController callback:(TimeThirdSDKLoginCallback)callback
 {
+    TimeLog(@"ijijijijiiiiiji");
     if (SDKType == TimeThirdSDkTypeFBLogin) {
         if (self.existedFBLoginSDK) {
             [FBAdapter loginWithFromViewController:fromViewController callback:callback];

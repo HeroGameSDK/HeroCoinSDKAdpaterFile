@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-//#import <HeroCoinSDK/HeroCoinSDK.h>
 #import "TimeThirdSDKLoginResult.h"
 
 /// 第三方SDK类型，与SDK内部ThirdSDkType保持一致
@@ -55,7 +54,14 @@ typedef void (^TimeThirdSDKSharingCallback)(TimeSharingPlatformType platformType
 
 /// 打印Log
 static inline void TimeLog(NSString *message) {
-    if ([TimeSDKLogSystem sharedInstance].isNeedOpenLog) {
+    Class timeSDKLogSystemClass = NSClassFromString(@"TimeSDKLogSystem");
+    if (timeSDKLogSystemClass == nil) { return; }
+    SEL sharedSEL = NSSelectorFromString(@"sharedInstance");
+    if (![timeSDKLogSystemClass respondsToSelector:sharedSEL]) { return ; }
+    id logSystem = [timeSDKLogSystemClass performSelector:sharedSEL];
+    NSNumber *isOpenNumber = [logSystem valueForKey:@"isNeedOpenLog"];
+    BOOL isOpen = isOpenNumber.boolValue;
+    if (isOpen) {
         NSLog(@"%@", message);
     }
 }
